@@ -66,7 +66,7 @@ if(isset($_POST['signup'])){
         alert("Account With the given Email Already Exists....");
         </script>
         <?php
-        header('location:signup.html');
+        header('location:signup.php');
 
     }
     else{
@@ -77,7 +77,7 @@ if(isset($_POST['signup'])){
         alert( "Signup Successful");
         </script>
         <?php
-        header('location:login.html');
+        header('location:login.php');
     }
     $con->close();
 }
