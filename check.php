@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,69 +15,77 @@
     <div class="navbar">
         <ul class="nav-list">
             <div class="logo"><img src="img/logo.png" onclick="window.location.href = 'account.php';" alt="logo"></div>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="movies.html">Take Quiz</a></li>
-            <li><a href="tvseries.php">Contact</a></li>
-            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="quiz.php">Take Quiz</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="aboutus.php">About Us</a></li>
         </ul>
     </div>
 
-    <section class="background firstSectionindex">
+    <section class="background firstSectioncheck">
         <div class="box-main">
             <div class="firsthalf">
-               
-                
 
 
 
-<?php
-include "db_conn.php";
 
-if(isset($_POST['submit'])){
-    if(!empty($_POST['quizcheck']))
-    {
-        $count=count($_POST['quizcheck']);
-        echo " Out of 5, you have selected ".$count. "options";
-        $result=0;
-        $i=1;
-        $selected =$_POST['quizcheck'];
-        //print_r($selected);
 
-        $q = "select * from questions";
-        $query = mysqli_query($con,$q);
+                <?php
+                include "db_conn.php";
 
-        while($rows = mysqli_fetch_array($query))
-        {
-            //print_r($rows['ans_id']);
-            $checked = $rows['ans_id'] == $selected[$i];
+                if (isset($_POST['submit'])) {
+                    if (!empty($_POST['quizcheck'])) {
+                        $count = count($_POST['quizcheck']);
+                ?>
+                        <div class="check1">
+                            <?php
+                            echo " Out of 5, you have Attempted " . $count . " Questions";
+                            ?>
+                        </div>
+                        <?php
+                        $result = 0;
+                        $i = 1;
+                        $selected = $_POST['quizcheck'];
+                        //print_r($selected);
 
-            if($checked){
-                $result++;
-            }
-            $i++;
-        }
+                        $q = "select * from questions";
+                        $query = mysqli_query($con, $q);
 
-        echo "<br> ur total result is".$result;
+                        while ($rows = mysqli_fetch_array($query)) {
+                            //print_r($rows['ans_id']);
+                            $checked = $rows['ans_id'] == $selected[$i];
 
-        if(!isset($_SESSION)) 
-        { 
-            session_start(); 
-        } 
+                            if ($checked) {
+                                $result++;
+                            }
+                            $i++;
+                        }
+                        ?>
+                        <div class="check2">
+                            <?php
+                            echo "<br> Your total Score is " . $result;
 
-        $name = $_SESSION['username'];
-        $finalresult = "insert into score(username,totalquestion,anscorrect)
+                            ?>
+                        </div>
+                <?php
+                        if (!isset($_SESSION)) {
+                            session_start();
+                        }
+
+                        $name = $_SESSION['username'];
+                        $finalresult = "insert into score(username,totalquestion,anscorrect)
         values ('$name','5',$result)";
-        $queryresult=mysqli_query($con,$finalresult);
-    }
-}
-?>
-<div class="buttons">
-                    <button class="btn" onclick="window.location.href = 'quiz.php';">Take Quiz</button>
+                        $queryresult = mysqli_query($con, $finalresult);
+                    }
+                }
+                ?>
+                <div class="buttons checkbtn">
+                    <button class="btn" onclick="window.location.href = 'quiz.php';">Take Quiz Again</button>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <footer>
         <p class="text-footer">
             Copyright &copy; 2022 - www.movieshrine.com All rights resreved

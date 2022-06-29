@@ -15,19 +15,19 @@
     <div class="navbar">
         <ul class="nav-list">
             <div class="logo"><img src="img/logo.png" onclick="window.location.href = 'account.php';" alt="logo"></div>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="movies.html">Take Quiz</a></li>
-            <li><a href="tvseries.php">Contact</a></li>
-            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="quiz.php">Take Quiz</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="aboutus.php">About Us</a></li>
         </ul>
     </div>
 
-    <section class="background firstSectionindex">
+    <section class="background firstSectioncheck">
         <div class="box-main">
             <div class="firsthalf">
                
-                <div class="buttons">
-                    <button class="btn" onclick="window.location.href = 'quiz.php';">Take Quiz</button>
+                <div class="buttons homebtn">
+                    <button class="btnhome" onclick="window.location.href = 'quiz.php';">Take Quiz</button>
                 </div>
             </div>
         </div>

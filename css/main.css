@@ -10,12 +10,12 @@
     align-items: center;
 }
 .logo img{
-    width: 60%;
+    width: 70%;
 
 }
 .navbar {
     overflow: hidden;
-    background-color: rgba(255,137,52,1);
+    background-color: rgb(52, 214, 255);
     position: sticky;
     display: flex;
     top: 0;
@@ -25,7 +25,7 @@
   }
   .navbarlogin {
     overflow: hidden;
-    background-color: rgba(255,137,52,1);
+    background-color: rgb(52, 231, 225);
     position: sticky;
     display: flex;
     top: 0;
@@ -41,7 +41,7 @@
     text-align: center;
     font-family: Lobster;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 22px;
   }
   .nav-list{
       width: 50%;
@@ -65,7 +65,7 @@
 
   }
   .rightNav{
-    background-color: rgba(255,137,52,1);
+    background-color: rgb(52, 231, 225);
     width: 50%;
     text-align: right;
     padding: 0.23px;
@@ -80,7 +80,7 @@
 
   .background{
       /* background: rgba(0,0,0,0.7) url(../img/bg.jpg); */
-      background: linear-gradient(to bottom, #a9b7ba, #ff6f00, #6abbf6);
+      background: linear-gradient(to bottom, #a9b7ba, rgb(52, 231, 225), #bed6e7);
       background-size: cover;
       background-blend-mode: darken;
   }
@@ -126,7 +126,30 @@
     padding: 10px;
 }
 
+.check1{
+    padding-top: 200px;
+    font-size: 35px;
+}
 
+.check2{
+    font-size: 35px;
+    text-align: center;
+}
+
+
+.checkbtn{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.firstSectioncheck{
+    height: 100vh;
+}
+
+
+.homebtn{
+    padding-top: 370px;
+}
 .firstSectionsearch{
     height: 75vh;
     padding: 7%;
@@ -138,24 +161,6 @@
     margin-top: 0%;
 }
 
-.firstSectionwebdata{
-    height: 28vh;
-    padding: 15%;
-    margin-top: 0%;
-}
-
-.firstSectionmovienotfound{
-    height:0vh;
-    padding: 0%;
-    margin-top: 0%;
-}
-
-.secondhalf img{
-    width: 120%;
-    border: black;
-    border-radius: 30px;
-    padding: 20px;
-}
 .text-big{
     font-size: 41px;
 
@@ -178,7 +183,26 @@
     text-decoration: none;
     font-family: Lobster;
 }
+
+.btnhome{
+    padding: 10px 29px;
+    margin: 7px 3px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 50px;
+    background: none;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Lobster;
+}
+
+
 .btn:hover {
+    color: rgb(0, 0, 0);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  .btnhome:hover {
     color: rgb(0, 0, 0);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
@@ -234,7 +258,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background : rgba(255,137,52,1);
+    background : rgb(52, 231, 225);
 }
 
 table {
@@ -250,7 +274,7 @@ table {
     font-size: 23px;
   }
   
-  tr:hover {background-color: rgba(255,137,52,1);}
+  tr:hover {background-color: rgb(52, 231, 225);;}
 
   a:link, a:visited {
     text-decoration: none;
