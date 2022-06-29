@@ -28,19 +28,20 @@ include "db_conn.php";
 
     <section class="background firstSectionindex">
         <h1 class="heading"> Computer Science Quiz </h1>
-        <div class="fullcard">
-            <div class="card">
 
-                <h3 class="card header"> Welcome
-                    <?php
-                    if (!isset($_SESSION)) {
-                        session_start();
-                    }
-                    echo $_SESSION['username'];
-                    ?>
-                    You have To select only one out of 4. Best of luck!
-                </h3>
-            </div><br>
+        <div class="card">
+
+            <h3 class="card header"> Welcome
+                <?php
+                if (!isset($_SESSION)) {
+                    session_start();
+                }
+                echo $_SESSION['username'];
+                ?>
+                You have To select only one out of 4. Best of luck!
+            </h3>
+        </div><br>
+        <div class="fullcard">
             <form action="check.php" method="post">
                 <?php
 

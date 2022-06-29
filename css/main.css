@@ -97,14 +97,44 @@
     padding: 15%;
     margin-top: 0%;
 }
+
+.heading{
+    justify-content: center;
+    align-content: center;
+    padding: 40px;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times new Roman';
+}
+.fullcard{
+    padding-left: 300px;
+}
+.card.header{
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.card-header{
+    font-size: 22px;
+    padding: 10px;
+}
+
+.card-body{
+    font-size: 21px;
+    padding: 10px;
+}
+
+
 .firstSectionsearch{
     height: 75vh;
     padding: 7%;
     margin-top: 0%;
 }
 .firstSectionindex{
-    height: 25vh;
-    padding: 15%;
+    height: 165vh;
+    padding: 3%;;
     margin-top: 0%;
 }
 
