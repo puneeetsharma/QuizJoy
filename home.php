@@ -35,7 +35,7 @@
     
     <footer>
         <p class="text-footer">
-            Copyright &copy; 2022 - www.movieshrine.com All rights resreved
+            Copyright &copy; 2022 - www.quizjoy.com All rights resreved
         </p>
     </footer>
 </body>

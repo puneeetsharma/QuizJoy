@@ -6,12 +6,12 @@ body{
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #3b2012, #ff6f00, #5c2108);
+	background: linear-gradient(to bottom, #959191, rgb(52, 231, 225), #85817f);
 }
 .main{
 	width: 400px;
 	height: 500px;
-	background: rgb(146, 132, 132);
+	background: rgb(52, 231, 225);
 	overflow: hidden;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
@@ -63,7 +63,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #e06417;
+	background: #6082aa;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;

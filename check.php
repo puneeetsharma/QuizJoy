@@ -84,11 +84,15 @@
                 </div>
             </div>
         </div>
+
+        <div class="buttons checkbtn">
+                    <button class="btn" onclick="window.location.href = 'login.php';"> logout </button>
+        </div>
     </section>
 
     <footer>
         <p class="text-footer">
-            Copyright &copy; 2022 - www.movieshrine.com All rights resreved
+        Copyright &copy; 2022 - www.quizjoy.com All rights resreved
         </p>
     </footer>
 </body>
