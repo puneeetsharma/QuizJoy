@@ -1,3 +1,7 @@
+<?php
+include "db_conn.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,11 +27,54 @@
     </div>
 
     <section class="background firstSectionindex">
-               <h1 class="heading"> Computer Science Quiz </h1>
-               <div class= "card" >
-                <h3> Welcome  <?php echo $_SESSION['username']; ?> You have To select only one out of 4. Best of luck! </h3>
+        <h1 class="heading"> Computer Science Quiz </h1>
+        <div class="fullcard">
+            <div class="card">
+
+                <h3 class="card header"> Welcome
+                    <?php
+                    if (!isset($_SESSION)) {
+                        session_start();
+                    }
+                    echo $_SESSION['username'];
+                    ?>
+                    You have To select only one out of 4. Best of luck!
+                </h3>
+            </div><br>
+            <form action="check.php" method="post">
+                <?php
+
+                for ($i = 1; $i < 6; $i++) {
+                    $q = "Select * from questions where qid=$i";
+                    $query = mysqli_query($con, $q);
+
+                    while ($rows = mysqli_fetch_array($query)) {
+                ?>
+                        <div class="card">
+                            <h4 class="card-header">
+                                <?php echo $rows['question'] ?>
+                            </h4>
+                            <?php
+                            $q = "Select * from answers where ans_id=$i";
+                            $query = mysqli_query($con, $q);
+
+                            while ($rows = mysqli_fetch_array($query)) {
+                            ?>
+                                <div class="card-body">
+                                    <input type="radio" name="quizcheck[<?php echo $rows['ans_id']; ?>]" value="<?php echo $rows['aid'] ?>">
+                                    <?php echo $rows['answer']; ?>
+                                </div>
+                    <?php
+                            }
+                        }
+                    }
+                    ?>
+                    <input type="submit" name="submit" class="btn" Value="Submit">
+            </form>
+        </div>
+        </div>
     </section>
-    
+
     <footer>
         <p class="text-footer">
             Copyright &copy; 2022 - www.movieshrine.com All rights resreved
@@ -36,4 +83,3 @@
 </body>
 
 </html>
-
